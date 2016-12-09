@@ -1,0 +1,3 @@
+user.txt
+pictures/*
+!pictures/.gitkeep
