@@ -12,7 +12,7 @@ if (isset($_SESSION['isLogged'])) {
                     if ($file == '.' || $file == '..') {
                         continue;
                     }
-                    echo "Фаилът се казва: <a href='#' download='" . $file . "'>$file </a>" . filesize($dir . '/' . $file) . " bytes" . "\n" . "</br>";
+                    echo "Фаилът се казва: <a href='pictures/".$_SESSION['username']."/" . $file . "' download>$file </a>" . filesize($dir . '/' . $file) . " bytes" . "\n" . "</br>";
                 }
                 closedir($dh);
             }
