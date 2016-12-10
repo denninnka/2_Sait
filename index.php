@@ -16,11 +16,17 @@ if (isset($_POST['vhod'])) {
                 exit;
             }
         }
+
         if ($_SESSION['isLogged'] == false) {
             echo "Грешно потребителско име или парола";
         }
     }
 }
+if ($_SESSION['isLogged'] && $_SESSION['username']) {
+    header('Location: ./allfiles.php');
+    exit;
+}
+var_dump($_SESSION['isLogged']);
 if (isset($_POST['registraciq'])) {
     header('Location: ./registraciq.php');
     exit;
