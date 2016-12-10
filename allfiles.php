@@ -5,7 +5,7 @@ include './includes/header.php';
 //var_dump($_SESSION['username']);
 if (isset($_SESSION['isLogged'])) {
     if (isset($_SESSION['username'])) {
-        $dir = '/var/www/html/Sait/pictures/' . $_SESSION['username'];
+        $dir = dirname(__FILE__).'/pictures/' . $_SESSION['username'];
         if (is_dir($dir)) {
             if ($dh = opendir($dir)) {
                 while (($file = readdir($dh)) !== false) {
